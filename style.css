@@ -1,0 +1,393 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9; /* Light background */
+    color: #333; /* Dark Text */
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #59981A;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+.logo {
+    font-family: 'Arial, sans-serif';
+    font-size: 2rem;
+    font-weight: bold;
+    color: #222;
+}
+
+.logo-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo-link:hover {
+    color: #ffee00; /* Highlight color on hover */
+}
+
+.highlight {
+    color: #ff4500; /* Branding color for 'N' */
+}
+
+.header .logo {
+    font-size: 2.8em;
+    font-style: Monospace;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 1em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ECF87F;
+    transform: scale(1.05);
+}
+/* Hero Section */
+.hero {
+    background-color: #008080; /* Teal background */
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    font-size: 1.4em;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.cta-button {
+    background-color: #ECF87F; /* Soft Yellow Green */
+    color: #59981A; /* Olive Green Text */
+    padding: 12px 25px;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #81B622; /* Slightly darker on hover */
+    transform: translateY(-5px); /* Lift effect */
+}
+
+/* Simplified Typography and Layout */
+header nav ul li a:hover {
+    color: #81B622; /* Hover Color */
+}
+
+/* Add smooth transitions for text and hover effects */
+a {
+    transition: color 0.3s ease;
+}
+
+/* Footer - Minimal Style */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+}
+
+footer p {
+    font-size: 1em;
+}
+
+/* No fancy animations for simplicity */
+
+
+/* Animation for Hero Section */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Popular Section */
+.popular, .menu {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.popular h2, .menu h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #4CAF50; /* Green for headers */
+}
+
+/* Item Cards */
+.items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.item-card {
+    background-color: white;
+    width: 300px;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.item-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.item-card img {
+    width: 100%;
+    height: 45%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.item-card h3 {
+    color: #4CAF50; /* Green text */
+    font-size: 1.6em;
+    margin-bottom: 10px;
+}
+
+.item-card p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    color: #777;
+}
+
+.add-button {
+    background-color: #81B622; /* Lime Green */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+.add-button:hover {
+    background-color: #4CAF50; /* Green on hover */
+}
+
+/* Order Section */
+.order {
+    background-color: #F4F4F9; /* Light background */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#order-list {
+    margin-bottom: 30px;
+}
+
+#checkout-btn {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#checkout-btn:hover {
+    background-color: #2E8B57; /* Dark green for hover */
+}
+
+/* Footer */
+footer {
+    background-color: #81B622; /* Lime Green */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+/* Order Section */
+.order {
+    background-color: #F4F4F9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.customer-details {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.customer-details h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.form-group input, .form-group textarea, .form-group select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1.1em;
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+button {
+    font-size: 1.1em;
+    padding: 12px 25px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2E8B57;
+}
+/* Contact Section */
+.contact {
+    background-color: #F1F8F6; /* Soft background color to contrast with the rest of the page */
+    padding: 50px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    border-top: 5px solid #81B622; /* Green accent on the top */
+    animation: fadeIn 1s ease-in-out;
+}
+
+.contact h2 {
+    font-size: 2.5em;
+    color: #3D550C; /* Olive Green for the header */
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.2em;
+    color: #555; /* Dark gray for readability */
+    margin-bottom: 20px;
+}
+
+.contact a {
+    color: #81B622; /* Lime Green for email link */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact a:hover {
+    color: #59981A; /* Darker green on hover */
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-icon {
+    font-size: 1.3em;
+    color: #3D550C; /* Olive Green for social links */
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #81B622; /* Lime Green on hover */
+}
+
+/* Footer */
+footer {
+    background-color: #3D550C; /* Olive Green for footer background */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+footer .footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Animation for fade-in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

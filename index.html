@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Snack N Joy</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <!-- Header Section -->
+        <header class="header">
+            <div class="logo">
+                <a href="#" aria-label="Snack N Joy Logo" class="logo-link">
+                    Snack <span class="highlight">N</span> Joy
+                </a>
+            </div>
+            
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#popular">Popular</a></li>
+                    <li><a href="#order">Order</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <button class="menu-toggle" aria-label="Open Menu">&#9776;</button>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <h1>Welcome to Snack N Joy</h1>
+                <p>Where every bite brings a smile and every meal is a moment of pure joy!</p>
+                <a href="#menu" class="cta-button">Explore Our Menu</a>
+            </div>
+        </section>
+
+        <!-- Popular Section -->
+        <section id="popular" class="popular">
+            <h2>Popular Items</h2>
+            <div class="items">
+                <div class="item-card" onclick="addToCart('Classic Veggie Sandwich', 2.5)">
+                    <img src="https://shorturl.at/ZF0wJ" alt="Classic Veggie Sandwich">
+                    <h3>Classic Veggie Sandwich</h3>
+                    <p>Fresh veggies on whole-grain bread</p>
+                    <button class="add-button">Add to Cart</button>
+                </div>
+                <div class="item-card" onclick="addToCart('Veggie Panini', 4)">
+                    <img src="https://shorturl.at/mLAcv" alt="Veggie Panini">
+                    <h3>Veggie Panini</h3>
+                    <p>Grilled veggies with melted cheese</p>
+                    <button class="add-button">Add to Cart</button>
+                </div>
+                <div class="item-card" onclick="addToCart('French fries', 3)">
+                    <img src="https://shorturl.at/Bb59w" alt="French fries">
+                    <h3>French fries</h3>
+                    <p>Crispy, golden, and packed with flavor</p>
+                    <button class="add-button">Add to Cart</button>
+                </div>
+                
+            </div>
+        </section>
+        <section id="menu" class="menu">
+            <h2>Menu</h2>
+            <div class="items">
+                <div class="item-card" onclick="addToCart('Veggie Burger', 3)">
+                    <img src="https://shorturl.at/m7CV9" alt="Veggie Burger">
+                    <h3>Veggie Burger</h3>
+                    <p>Delicious veggie patty with fresh toppings</p>
+                    <button class="add-button">Add to Cart</button>
+                </div>
+                <div class="item-card" onclick="addToCart('Samosa', 1)">
+                    <img src="https://shorturl.at/Dq2yM" alt="Samosa">
+                    <h3>Samosa</h3>
+                    <p>Crispy, golden, and packed with flavor</p>
+                    <button class="add-button">Add to Cart</button>
+                </div>
+                <div class="item-card" onclick="addToCart('Chocolate Sandwich', 2)">
+                    <img src="https://shorturl.at/aVbE0" alt="Chocolate Sandwich">
+                    <h3>Chocolate Sandwich</h3>
+                    <p>Rich chocolate melts between golden buttery toast</p>
+                    <button class="add-button">Add to Cart</button>
+                </div>
+                <div class="item-card" onclick="addToCart('Tandoori Paneer Tikka', 5)">
+                    <img src="https://shorturl.at/a1kzH" alt="Tandoori Paneer Tikka">
+                    <h3>Tandoori Paneer Tikka</h3>
+                    <p>Fresh mozzarella and basil with balsamic glaze</p>
+                    <button class="add-button">Add to Cart</button>
+                </div>
+                <div class="item-card" onclick="addToCart('Garlic Cheese Toast', 4)">
+                    <img src="https://shorturl.at/k78YO" alt="Garlic Cheese Toast">
+                    <h3>Garlic Cheese Toast</h3>
+                    <p>Golden crunch, melted cheese, and a garlicky kick</p>
+                    <button class="add-button">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Order Section -->
+        <section id="order" class="order">
+            <h2>Your Order</h2>
+            <div id="order-list">
+                <p>empty.</p>
+            </div>
+            </form>
+        </section>
+
+        <!-- Customer Details Form -->
+        <div id="customer-details" class="customer-details">
+            <h3>Please Provide Your Details</h3>
+            <form id="checkout-form" onsubmit="return checkout(event)">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="mobile">Mobile Number:</label>
+                    <input type="text" id="mobile" name="mobile" required>
+                </div>
+                <div class="form-group">
+                    <label for="payment-method">Payment Method:</label>
+                    <select id="payment-method" name="payment-method" required>
+                        <option value="">Select Payment Method</option>
+                        <option value="Credit-Card">Credit Card</option>
+                        <option value="UPI">UPI</option>
+                        <option value="Cash">Cash</option>
+                    </select>
+                </div>
+                <button id="checkout-btn" class="cta-button" type="submit">Proceed to Checkout</button>
+        </div>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="contact-container">
+                <h2>Contact Us</h2>
+                <p>If you have any questions or need assistance, feel free to reach out to us!</p>
+                <p>Email: <a href="mailto:support@snacknjoy.com">support@snacknjoy.com</a></p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com" target="_blank" class="social-icon">Facebook</a>
+                    <a href="https://www.instagram.com" target="_blank" class="social-icon">Instagram</a>
+                    <a href="https://x.com" target="_blank" class="social-icon">Twitter</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2024 Snack N Joy. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
